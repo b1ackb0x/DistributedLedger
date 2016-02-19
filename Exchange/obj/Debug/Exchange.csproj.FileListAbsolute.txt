@@ -1,16 +1,8 @@
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\Exchange.dll.config
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\Exchange.dll
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\Exchange.pdb
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\DomainModel.dll
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\DomainModel.pdb
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\obj\Debug\Exchange.csprojResolveAssemblyReference.cache
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\obj\Debug\Exchange.dll
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\obj\Debug\Exchange.pdb
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\bin\Exchange.dll.config
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\bin\Exchange.dll
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\bin\Exchange.pdb
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\bin\DomainModel.dll
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\bin\DomainModel.pdb
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\obj\Debug\Exchange.csprojResolveAssemblyReference.cache
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\obj\Debug\Exchange.dll
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Exchange\obj\Debug\Exchange.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\bin\Exchange.dll.config
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\bin\Exchange.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\bin\Exchange.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\bin\DomainModel.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\bin\DomainModel.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\obj\Debug\Exchange.csprojResolveAssemblyReference.cache
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\obj\Debug\Exchange.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\Exchange\obj\Debug\Exchange.pdb

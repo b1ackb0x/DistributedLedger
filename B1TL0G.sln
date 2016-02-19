@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{BB3E2953-2F2D-467B-A20A-8071083D79D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange", "Exchange\Exchange.csproj", "{0DC47669-95D8-441F-A8C9-AB6016B76815}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispatcherService", "DispatcherService\DispatcherService.csproj", "{6BB41A45-3980-4024-8C49-E1AE1F81B478}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0DC47669-95D8-441F-A8C9-AB6016B76815} = {0DC47669-95D8-441F-A8C9-AB6016B76815}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{69FC3EFC-6A36-408C-AD99-B3571952392A}"
 EndProject

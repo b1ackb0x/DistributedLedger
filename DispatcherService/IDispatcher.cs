@@ -5,21 +5,22 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using DomainModel;
 
 namespace Dispatcher
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IDispatcher
-    {
-
+    {       
         [OperationContract]
         string GetData(int value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        void SetTransaction(Transaction transaction);
     }
 
 

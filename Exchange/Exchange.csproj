@@ -60,7 +60,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExchangeService.svc" />
-    <Content Include="Web.config" />
+    <None Include="Service References\DispatcherService\DispatcherService.disco" />
+    <None Include="Service References\DispatcherService\configuration91.svcinfo" />
+    <None Include="Service References\DispatcherService\configuration.svcinfo" />
+    <Content Include="Service References\DispatcherService\Exchange.DispatcherService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\DispatcherService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExchangeDataContract.cs" />
@@ -69,11 +81,32 @@
     </Compile>
     <Compile Include="IExchange.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DispatcherService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\DispatcherService\DispatcherService.wsdl" />
+    <None Include="Service References\DispatcherService\DispatcherService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DispatcherService\DispatcherService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DispatcherService\DispatcherService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DispatcherService\DispatcherService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DispatcherService\DispatcherService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,6 +119,12 @@
       <Project>{bb3e2953-2f2d-467b-a20a-8071083d79d6}</Project>
       <Name>DomainModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DispatcherService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

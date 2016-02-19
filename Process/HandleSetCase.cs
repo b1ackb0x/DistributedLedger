@@ -49,7 +49,7 @@ namespace Process
         {
             Block newBlock = new Block();
             newBlock.TimeStamp = DateTimeOffset.UtcNow;
-            newBlock.ProofOfWork = CustomHash.ComputeHash(transaction.Amount.ToString(), "SHA256", null);
+            newBlock.ProofOfWork = CustomHash.ComputeHash(string.Concat(transaction.Amount.ToString(), latestBlock.PreviousBlock), "SHA256", null);
             newBlock.PreviousBlock = latestBlock.PreviousBlock;
             newBlock.EncryptedTransactions = new List<Transaction>();
             newBlock.EncryptedTransactions.Add(transaction);

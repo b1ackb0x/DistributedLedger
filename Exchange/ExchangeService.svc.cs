@@ -42,7 +42,9 @@ namespace Exchange
 
         public void SetTransaction(ExchangeRequest exchangeRequest)
         {
-            new DispatcherService.DispatcherClient().SetTransaction(exchangeRequest.Trans);
+            DispatcherService.DispatcherClient client = new DispatcherService.DispatcherClient();
+            client.SetTransaction(exchangeRequest.Trans);
+            client.Close();
             /*
              lock (locker)
             {

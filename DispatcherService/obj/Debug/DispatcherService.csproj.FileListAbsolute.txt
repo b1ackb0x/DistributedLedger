@@ -1,9 +1,3 @@
-C:\B1TL0G\DispatcherService\bin\DispatcherService.dll.config
-C:\B1TL0G\DispatcherService\bin\DispatcherService.dll
-C:\B1TL0G\DispatcherService\bin\DispatcherService.pdb
-C:\B1TL0G\DispatcherService\obj\Debug\DispatcherService.csprojResolveAssemblyReference.cache
-C:\B1TL0G\DispatcherService\obj\Debug\DispatcherService.dll
-C:\B1TL0G\DispatcherService\obj\Debug\DispatcherService.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DispatcherService.dll.config
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DispatcherService.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DispatcherService.pdb

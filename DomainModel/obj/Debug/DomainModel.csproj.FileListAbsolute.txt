@@ -1,9 +1,5 @@
-C:\B1TL0G\DomainModel\bin\Debug\DomainModel.dll
-C:\B1TL0G\DomainModel\bin\Debug\DomainModel.pdb
-C:\B1TL0G\DomainModel\obj\Debug\DomainModel.dll
-C:\B1TL0G\DomainModel\obj\Debug\DomainModel.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainModel.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb
-C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache

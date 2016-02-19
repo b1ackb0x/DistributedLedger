@@ -1,14 +1,9 @@
-C:\B1TL0G\Process\bin\Debug\Process.dll
-C:\B1TL0G\Process\bin\Debug\Process.pdb
-C:\B1TL0G\Process\obj\Debug\Process.csprojResolveAssemblyReference.cache
-C:\B1TL0G\Process\obj\Debug\Process.dll
-C:\B1TL0G\Process\obj\Debug\Process.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\bin\Debug\Process.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\bin\Debug\Process.pdb
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.dll
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\bin\Debug\DomainModel.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\bin\Debug\Repository.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\bin\Debug\DomainModel.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\bin\Debug\Repository.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.csprojResolveAssemblyReference.cache
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.pdb

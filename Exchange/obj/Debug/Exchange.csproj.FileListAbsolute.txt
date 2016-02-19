@@ -6,3 +6,11 @@ C:\B1TL0G\Exchange\bin\DomainModel.dll
 C:\B1TL0G\Exchange\bin\DomainModel.pdb
 C:\B1TL0G\Exchange\obj\Debug\Exchange.dll
 C:\B1TL0G\Exchange\obj\Debug\Exchange.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\Exchange.dll.config
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\Exchange.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\Exchange.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\DomainModel.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\bin\DomainModel.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\obj\Debug\Exchange.csprojResolveAssemblyReference.cache
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\obj\Debug\Exchange.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Exchange\obj\Debug\Exchange.pdb

@@ -8,9 +8,16 @@ namespace DomainModel
 {
     public class Block
     {
-        public string Hash { get; set; }
+        public string ProofOfWork { get; set; }
+
         public string EncryptedTimeStamp { get; set; }
+
         public List<EncryptedTransaction> EncryptedTransactions { get; set; }
-        public Block  PreviousBlock{ get; set; }
+
+        public Transaction Transaction { get; set; }
+
+        public Block PreviousBlock { get; set; }
+
+        public long Threshhold { get; set; }
     }
 }

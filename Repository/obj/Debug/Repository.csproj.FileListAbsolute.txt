@@ -5,3 +5,10 @@ C:\B1TL0G\Repository\bin\Debug\DomainModel.pdb
 C:\B1TL0G\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 C:\B1TL0G\Repository\obj\Debug\Repository.dll
 C:\B1TL0G\Repository\obj\Debug\Repository.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\bin\Debug\Repository.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\bin\Debug\Repository.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\bin\Debug\DomainModel.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\bin\Debug\DomainModel.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\obj\Debug\Repository.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\obj\Debug\Repository.pdb

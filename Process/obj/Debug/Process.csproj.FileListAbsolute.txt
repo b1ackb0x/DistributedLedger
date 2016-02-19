@@ -7,3 +7,12 @@ C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\bin\Debug\Repository.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.csprojResolveAssemblyReference.cache
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\Process\obj\Debug\Process.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\bin\Debug\Process.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\bin\Debug\Process.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\bin\Debug\DomainModel.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\bin\Debug\Repository.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\bin\Debug\DomainModel.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\bin\Debug\Repository.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\obj\Debug\Process.csprojResolveAssemblyReference.cache
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\obj\Debug\Process.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\Process\obj\Debug\Process.pdb

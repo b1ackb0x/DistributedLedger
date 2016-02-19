@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomHash.cs" />
     <Compile Include="HandleGetCase.cs" />
     <Compile Include="HandleProcessCase.cs" />
     <Compile Include="HandleSetCase.cs" />

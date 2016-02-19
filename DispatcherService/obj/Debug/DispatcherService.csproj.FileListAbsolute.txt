@@ -3,3 +3,9 @@ C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\Dispatcher
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DispatcherService.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.pdb
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DispatcherService\bin\DispatcherService.dll.config
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DispatcherService\bin\DispatcherService.dll
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DispatcherService\bin\DispatcherService.pdb
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.csprojResolveAssemblyReference.cache
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.dll
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.pdb

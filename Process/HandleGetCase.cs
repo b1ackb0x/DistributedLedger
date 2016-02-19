@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Process
 {
-    class HandleGetCase
+    public class HandleGetCase
     {
     }
 }

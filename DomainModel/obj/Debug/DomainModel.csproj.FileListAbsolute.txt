@@ -2,4 +2,12 @@ C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainMode
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb
+<<<<<<< Updated upstream
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
+=======
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\bin\Debug\DomainModel.dll
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
+C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb
+>>>>>>> Stashed changes

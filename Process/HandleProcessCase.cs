@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Process
 {
-    class HandleProcessCase
+    // This case handle the transactions with the bank.
+    public class HandleProcessCase
     {
+
     }
 }

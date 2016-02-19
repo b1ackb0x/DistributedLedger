@@ -48,13 +48,14 @@ namespace Process
         {
             Block newBlock = new Block();
             newBlock.TimeStamp = DateTimeOffset.UtcNow;
-            //newBlock.ProofOfWork = PrepareHash();
+            newBlock.ProofOfWork = CustomHash.ComputeHash(transaction.Amount.ToString(), "SHA256", null);
             newBlock.PreviousBlock = latestBlock.PreviousBlock;
             newBlock.EncryptedTransactions = new List<Transaction>();
             newBlock.EncryptedTransactions.Add(transaction);
 
             return newBlock;
         }
+
 
         private long GetSize(object o)
         {

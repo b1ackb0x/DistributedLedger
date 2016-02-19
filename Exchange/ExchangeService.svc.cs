@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using DomainModel;
 
 namespace Exchange
 {
@@ -73,6 +74,14 @@ namespace Exchange
                 }
             }
              */
+        }
+
+        public DomainModel.BlockChain GetBlockChain()
+        {
+            DispatcherService.DispatcherClient client = new DispatcherService.DispatcherClient();
+            BlockChain bc = client.GetBlockChain();
+            client.Close();
+            return bc;
         }
     }
 

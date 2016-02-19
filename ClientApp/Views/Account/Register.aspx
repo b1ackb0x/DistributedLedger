@@ -1,60 +1,40 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MvcApplication1.Models.RegisterModel>" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClientApp.Models.RegisterModel>" %>
 
 <asp:Content ID="registerTitle" ContentPlaceHolderID="TitleContent" runat="server">
     Register
 </asp:Content>
 
 <asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Create a New Account</h2>
-    <p>
-        Use the form below to create a new account. 
-    </p>
-    <p>
-        Passwords are required to be a minimum of <%: ViewData["PasswordLength"] %> characters in length.
-    </p>
+    <hgroup class="title">
+        <h1>Register.</h1>
+        <h2>Create a new account.</h2>
+    </hgroup>
 
     <% using (Html.BeginForm()) { %>
-        <%: Html.ValidationSummary(true, "Account creation was unsuccessful. Please correct the errors and try again.") %>
-        <div>
-            <fieldset>
-                <legend>Account Information</legend>
-                
-                <div class="editor-label">
+        <%: Html.AntiForgeryToken() %>
+        <%: Html.ValidationSummary() %>
+
+        <fieldset>
+            <legend>Registration Form</legend>
+            <ol>
+                <li>
                     <%: Html.LabelFor(m => m.UserName) %>
-                </div>
-                <div class="editor-field">
                     <%: Html.TextBoxFor(m => m.UserName) %>
-                    <%: Html.ValidationMessageFor(m => m.UserName) %>
-                </div>
-                
-                <div class="editor-label">
-                    <%: Html.LabelFor(m => m.Email) %>
-                </div>
-                <div class="editor-field">
-                    <%: Html.TextBoxFor(m => m.Email) %>
-                    <%: Html.ValidationMessageFor(m => m.Email) %>
-                </div>
-                
-                <div class="editor-label">
+                </li>
+                <li>
                     <%: Html.LabelFor(m => m.Password) %>
-                </div>
-                <div class="editor-field">
                     <%: Html.PasswordFor(m => m.Password) %>
-                    <%: Html.ValidationMessageFor(m => m.Password) %>
-                </div>
-                
-                <div class="editor-label">
+                </li>
+                <li>
                     <%: Html.LabelFor(m => m.ConfirmPassword) %>
-                </div>
-                <div class="editor-field">
                     <%: Html.PasswordFor(m => m.ConfirmPassword) %>
-                    <%: Html.ValidationMessageFor(m => m.ConfirmPassword) %>
-                </div>
-                
-                <p>
-                    <input type="submit" value="Register" />
-                </p>
-            </fieldset>
-        </div>
+                </li>
+            </ol>
+            <input type="submit" value="Register" />
+        </fieldset>
     <% } %>
+</asp:Content>
+
+<asp:Content ID="scriptsContent" ContentPlaceHolderID="ScriptsSection" runat="server">
+    <%: Scripts.Render("~/bundles/jqueryval") %>
 </asp:Content>

@@ -61,12 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExchangeService.svc" />
+    <Content Include="Properties\DataSources\DomainModel.BlockChain.datasource" />
     <None Include="Service References\DispatcherService\DispatcherService.disco" />
     <None Include="Service References\DispatcherService\configuration91.svcinfo" />
     <None Include="Service References\DispatcherService\configuration.svcinfo" />
     <Content Include="Service References\DispatcherService\Exchange.DispatcherService.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\DispatcherService\DispatcherService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\DispatcherService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -142,7 +146,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56208</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56208/</IISUrl>
+          <IISUrl>http://localhost:8080</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

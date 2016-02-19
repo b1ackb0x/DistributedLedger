@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace MvcApplication1.Models
+namespace ClientApp.Models
 {
     public class TransactionModel
     {

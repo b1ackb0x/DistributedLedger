@@ -21,6 +21,9 @@ namespace Dispatcher
 
         [OperationContract]
         void SetTransaction(Transaction transaction);
+
+        [OperationContract]
+        BlockChain GetBlockChain();
     }
 
 

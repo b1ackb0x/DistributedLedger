@@ -1,40 +1,49 @@
-<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-    <div class="page">
-
-        <div id="header">
-            <div id="title">
-                <h1>B!TL0G Application</h1>
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html>
+<html lang="en">
+    <head runat="server">
+        <meta charset="utf-8" />
+        <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+        <link href="<%: Url.Content("~/favicon.ico") %>" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <%: Styles.Render("~/Content/css") %>
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><%: Html.Label("Distributed Ledger") %></p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        <%: Html.Partial("_LoginPartial") %>
+                    </section>
+                    <nav>
+                       <%-- <ul id="menu">
+                            <li><%: Html.ActionLink("Home", "Index", "Home") %></li>
+                            <li><%: Html.ActionLink("About", "About", "Home") %></li>
+                            <li><%: Html.ActionLink("Contact", "Contact", "Home") %></li>
+                        </ul>--%>
+                    </nav>
+                </div>
             </div>
-              
-            <div id="logindisplay">
-                <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
-            
-            <div id="menucontainer">
-            
-                <ul id="menu">              
-                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("About", "About", "Home")%></li>
-                </ul>
-            
-            </div>
+        </header>
+        <div id="body">
+            <asp:ContentPlaceHolder ID="FeaturedContent" runat="server" />
+            <section class="content-wrapper main-content clear-fix">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </section>
         </div>
-
-        <div id="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-
-            <div id="footer">
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET MVC Application</p>
+                </div>
             </div>
-        </div>
-    </div>
-</body>
+        </footer>
+
+        <%: Scripts.Render("~/bundles/jquery") %>
+        <asp:ContentPlaceHolder ID="ScriptsSection" runat="server" />
+    </body>
 </html>

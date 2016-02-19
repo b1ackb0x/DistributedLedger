@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using DomainModel;
 using Process;
 
 namespace Dispatcher
@@ -74,6 +75,11 @@ namespace Dispatcher
         {
                 Process.HandleSetCase obj = new HandleSetCase(transaction.SenderAccount, transaction.ReceiverAccount, transaction.Amount);   
                 obj.SetBlockChain();
+        }
+
+        public BlockChain GetBlockChain()
+        {
+            return Process.BlockChainManager.GetBlockChain();
         }
     }
 

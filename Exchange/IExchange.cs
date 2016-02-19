@@ -17,6 +17,9 @@ namespace Exchange
 
         [OperationContract(IsOneWay = true)]     
         void SetTransaction(ExchangeRequest objTransaction);
+
+        [OperationContract(IsOneWay = true)]
+        BlockChain GetBlockChain();
     }
 
 

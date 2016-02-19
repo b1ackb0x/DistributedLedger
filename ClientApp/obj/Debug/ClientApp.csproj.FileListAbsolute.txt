@@ -1,4 +1,0 @@
-C:\Users\pankaj.upadhyay\Documents\Visual Studio 2010\Projects\Service\MvcApplication1\bin\MvcApplication1.dll
-C:\Users\pankaj.upadhyay\Documents\Visual Studio 2010\Projects\Service\MvcApplication1\bin\MvcApplication1.pdb
-C:\Users\pankaj.upadhyay\Documents\Visual Studio 2010\Projects\Service\MvcApplication1\obj\Debug\MvcApplication1.dll
-C:\Users\pankaj.upadhyay\Documents\Visual Studio 2010\Projects\Service\MvcApplication1\obj\Debug\MvcApplication1.pdb

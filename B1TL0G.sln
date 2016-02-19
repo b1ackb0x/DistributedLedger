@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{BB3E2953-2F2D-467B-A20A-8071083D79D6}"
 EndProject
@@ -19,6 +19,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validations", "Validations\Validations.csproj", "{18752E3F-E457-4C44-BF3F-79218A22A023}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{553A412A-3B01-496C-8634-3F9013348B1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{9E717A31-06A8-41FD-8066-07FE0FE24F8F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0DC47669-95D8-441F-A8C9-AB6016B76815} = {0DC47669-95D8-441F-A8C9-AB6016B76815}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +59,10 @@ Global
 		{553A412A-3B01-496C-8634-3F9013348B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{553A412A-3B01-496C-8634-3F9013348B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{553A412A-3B01-496C-8634-3F9013348B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E717A31-06A8-41FD-8066-07FE0FE24F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E717A31-06A8-41FD-8066-07FE0FE24F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E717A31-06A8-41FD-8066-07FE0FE24F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E717A31-06A8-41FD-8066-07FE0FE24F8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

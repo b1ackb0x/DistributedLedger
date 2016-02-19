@@ -2,3 +2,8 @@ C:\Deepak Docs\BITLOG\DistributedLedger\Validations\bin\Debug\Validations.dll
 C:\Deepak Docs\BITLOG\DistributedLedger\Validations\bin\Debug\Validations.pdb
 C:\Deepak Docs\BITLOG\DistributedLedger\Validations\obj\Debug\Validations.dll
 C:\Deepak Docs\BITLOG\DistributedLedger\Validations\obj\Debug\Validations.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Validations\obj\Debug\Validations.csprojResolveAssemblyReference.cache
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Validations\obj\Debug\Validations.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Validations\obj\Debug\Validations.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Validations\bin\Debug\Validations.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Validations\bin\Debug\Validations.pdb

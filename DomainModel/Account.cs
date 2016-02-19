@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
-   public class Account
+    [Serializable]
+    public class Account
     {
         public int ID { get; set; }
         public string HolderName { get; set; }

@@ -10,3 +10,15 @@ C:\Deepak Docs\BITLOG\DistributedLedger\DispatcherService\bin\Process.dll
 C:\Deepak Docs\BITLOG\DistributedLedger\DispatcherService\bin\Repository.dll
 C:\Deepak Docs\BITLOG\DistributedLedger\DispatcherService\bin\Process.pdb
 C:\Deepak Docs\BITLOG\DistributedLedger\DispatcherService\bin\Repository.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DispatcherService.dll.config
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DispatcherService.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DispatcherService.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DomainModel.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\Process.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\Repository.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\DomainModel.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\Process.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\bin\Repository.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.csprojResolveAssemblyReference.cache
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.dll
+C:\Users\pallav.kumar\Desktop\DistributedLedger\DispatcherService\obj\Debug\DispatcherService.pdb

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
+    [Serializable]
     public class Block
     {
         public string ProofOfWork { get; set; }

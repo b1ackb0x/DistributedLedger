@@ -16,6 +16,7 @@ namespace Process
 
         public HandleSetCase(Account senderAccount, Account receiverAccount, double transactionAmount)
         {
+            transaction = new Transaction();
             transaction.ID = Guid.NewGuid();
             transaction.Amount = transactionAmount;
             transaction.ReceiverAccount = receiverAccount;
@@ -27,7 +28,7 @@ namespace Process
         {
             BlockChain bc = Repository.BlockChainMaster.BlockChain;
 
-            Block latestBlock = (Block)bc.Blocks.Values.GetEnumerator().Current; ///////to change
+            Block latestBlock = Repository.BlockChainMaster.GetLatestBlock();
 
             //Determine the size of encrypt transaction + Size of Existing block,
             if (GetSize(transaction) + GetSize(latestBlock) < latestBlock.Threshhold)

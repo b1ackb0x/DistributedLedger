@@ -1,22 +1,4 @@
-<<<<<<< Updated upstream
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainModel.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb
-C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
-=======
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\bin\Debug\DomainModel.dll
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
-C:\Users\vishu.puri\Desktop\Code\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb
->>>>>>> Stashed changes
-C:\B1TL0G\DomainModel\bin\Debug\DomainModel.dll
-C:\B1TL0G\DomainModel\bin\Debug\DomainModel.pdb
-C:\B1TL0G\DomainModel\obj\Debug\DomainModel.dll
-C:\B1TL0G\DomainModel\obj\Debug\DomainModel.pdb
-C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\bin\Debug\DomainModel.dll
-C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
-C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
-C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
-C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb

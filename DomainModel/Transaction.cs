@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
+    [Serializable]
     public class Transaction
     {
         public Guid ID { get; set; }

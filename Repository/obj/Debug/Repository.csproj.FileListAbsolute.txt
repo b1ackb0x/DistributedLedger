@@ -1,0 +1,7 @@
+C:\B1TL0G\Repository\bin\Debug\Repository.dll
+C:\B1TL0G\Repository\bin\Debug\Repository.pdb
+C:\B1TL0G\Repository\bin\Debug\DomainModel.dll
+C:\B1TL0G\Repository\bin\Debug\DomainModel.pdb
+C:\B1TL0G\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+C:\B1TL0G\Repository\obj\Debug\Repository.dll
+C:\B1TL0G\Repository\obj\Debug\Repository.pdb

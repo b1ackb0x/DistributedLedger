@@ -1,0 +1,4 @@
+C:\B1TL0G\Validations\bin\Debug\Validations.dll
+C:\B1TL0G\Validations\bin\Debug\Validations.pdb
+C:\B1TL0G\Validations\obj\Debug\Validations.dll
+C:\B1TL0G\Validations\obj\Debug\Validations.pdb

@@ -14,6 +14,6 @@ namespace Exchange
         [DataMember]
         public int ID { get; set; }
         [DataMember]
-        public double Ammount { get; set; }
+        public double Amount { get; set; }
     }
 }

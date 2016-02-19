@@ -14,7 +14,7 @@ namespace Exchange
     {
 
         [OperationContract]
-        void SetRequest(int value);
+        void SetRequest(Account account);
 
         [OperationContract]
         Account GetAccountDetails(int accountId);

@@ -8,13 +8,17 @@ using System.Text;
 
 namespace Exchange
 {
-    public class Exchange : IExchange
+    public class ExchangeService : IExchange
     {
         public Account GetAccountDetails(int Account)
         {
-            return null;
+            throw new NotImplementedException();
         }
 
 
+        public void SetRequest(Account account)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

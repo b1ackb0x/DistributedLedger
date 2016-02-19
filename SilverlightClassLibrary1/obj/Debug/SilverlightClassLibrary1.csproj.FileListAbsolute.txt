@@ -1,0 +1,5 @@
+C:\B1TL0G\SilverlightClassLibrary1\Bin\Debug\SilverlightClassLibrary1.dll
+C:\B1TL0G\SilverlightClassLibrary1\Bin\Debug\SilverlightClassLibrary1.pdb
+C:\B1TL0G\SilverlightClassLibrary1\obj\Debug\SilverlightClassLibrary1.csprojResolveAssemblyReference.cache
+C:\B1TL0G\SilverlightClassLibrary1\obj\Debug\SilverlightClassLibrary1.dll
+C:\B1TL0G\SilverlightClassLibrary1\obj\Debug\SilverlightClassLibrary1.pdb

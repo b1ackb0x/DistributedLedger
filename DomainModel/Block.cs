@@ -10,11 +10,9 @@ namespace DomainModel
     {
         public string ProofOfWork { get; set; }
 
-        public string EncryptedTimeStamp { get; set; }
+        public DateTimeOffset TimeStamp { get; set; }
 
-        public List<EncryptedTransaction> EncryptedTransactions { get; set; }
-
-        public EncryptedTransaction Transaction { get; set; }
+        public List<Transaction> EncryptedTransactions { get; set; }
 
         public Block PreviousBlock { get; set; }
 

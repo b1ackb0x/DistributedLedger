@@ -1,5 +1,6 @@
 ﻿using DomainModel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,48 +12,48 @@ namespace Process
 {
     public class HandleSetCase
     {
-        public Account SenderAccount { get; set; }
-        public Account ReceiverAccount { get; set; }
-        public double TransactionAmount { get; set; }
+        public Transaction transaction { get; set; }
 
         public HandleSetCase(Account senderAccount, Account receiverAccount, double transactionAmount)
         {
-            SenderAccount = senderAccount;
-            ReceiverAccount = receiverAccount;
-            TransactionAmount = transactionAmount;
-
-            Transaction traction = new Transaction();
-            traction.ID = Guid.NewGuid();
-            traction.Amount = TransactionAmount;
-            traction.ReceiverAccount = ReceiverAccount;
-            traction.SenderAccount = SenderAccount;
-            traction.TimeStamp = DateTimeOffset.UtcNow;
+            transaction.ID = Guid.NewGuid();
+            transaction.Amount = transactionAmount;
+            transaction.ReceiverAccount = receiverAccount;
+            transaction.SenderAccount = senderAccount;
+            transaction.TimeStamp = DateTimeOffset.UtcNow;
         }
 
         public void SetBlockChain()
         {
             BlockChain bc = Repository.BlockChainMaster.BlockChain;
 
-            Block latestBlock = bc.Blocks[bc.Blocks.Count - 1];
-            
+            Block latestBlock = (Block)bc.Blocks.Values.GetEnumerator().Current; ///////to change
+
             //Determine the size of encrypt transaction + Size of Existing block,
-            // if is greater than block threshhold, create new block, in the new block, add the reference of previous block , encrypted block, proof of work  
-            // else add encrypt transacton in block and update time stamp , proof of work  
-
+            if (GetSize(transaction) + GetSize(latestBlock) < latestBlock.Threshhold)
+            {
+                //Add in existing
+                latestBlock.EncryptedTransactions.Add(transaction);
+            }
+            else
+            {
+                //create new
+                latestBlock = CreateNewBlock(latestBlock);
+                bc.Blocks.Add(latestBlock.ProofOfWork, (latestBlock));
+            }
         }
 
-        public void CreateBlock()
-        {
-            //Block.EncryptedTimeStamp = DateTime.UtcNow.ToLongDateString();
-            //Block.ProofOfWork = PrepareHash();
-            ////Block.EncryptedTransactions=
-            //Block.PreviousBlock = PreviousBlock;
-        }
 
-        string PrepareHash()
+        public Block CreateNewBlock(Block latestBlock)
         {
-            string hash = string.Empty;
-            return hash;
+            Block newBlock = new Block();
+            newBlock.TimeStamp = DateTimeOffset.UtcNow;
+            //newBlock.ProofOfWork = PrepareHash();
+            newBlock.PreviousBlock = latestBlock.PreviousBlock;
+            newBlock.EncryptedTransactions = new List<Transaction>();
+            newBlock.EncryptedTransactions.Add(transaction);
+
+            return newBlock;
         }
 
         private long GetSize(object o)
@@ -67,21 +68,5 @@ namespace Process
 
             return size;
         }
-
-        private void EncryptTransaction()
-        {
-
-        }
-
-        public void AddToBlock()
-        {
-
-        }
-
-        public void AddBlockToBlockChain()
-        {
-
-        }
-
     }
 }

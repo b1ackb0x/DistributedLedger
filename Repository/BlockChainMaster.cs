@@ -9,16 +9,12 @@ namespace Repository
 {
     public class BlockChainMaster
     {
+        static BlockChainMaster()
+        {
+
+
+        }
         public static BlockChain BlockChain { get; set; }
 
-        public static Block GetLatestBlockOfBlockChain()
-        {
-            return BlockChain.Blocks[0];
-        }
-
-        public static void SetBlockChain(List<Block> bc)
-        {
-            BlockChain.Blocks = bc;
-        }
     }
 }

@@ -43,7 +43,6 @@
     <Compile Include="Bank.cs" />
     <Compile Include="Block.cs" />
     <Compile Include="BlockChain.cs" />
-    <Compile Include="EncryptedTransaction.cs" />
     <Compile Include="Minor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />

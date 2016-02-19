@@ -20,15 +20,12 @@
   <Class Name="DomainModel.Block">
     <Position X="12.25" Y="2.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAIABAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACCAAgAAIAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Block.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="PreviousBlock" />
     </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="EncryptedTransactions" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="DomainModel.BlockChain">
     <Position X="12" Y="5" Width="1.5" />
@@ -36,19 +33,6 @@
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BlockChain.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Blocks" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="DomainModel.EncryptedTransaction">
-    <Position X="12" Y="0.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AACAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EncryptedTransaction.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Transaction" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="DomainModel.Minor">
     <Position X="16.25" Y="4.75" Width="1.5" />
@@ -70,12 +54,12 @@
   <Class Name="DomainModel.Transaction">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAICAAAAAgAAAAAACAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAICAAAAAgAAAAACSAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Transaction.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="ReceiverAccount" />
       <Property Name="SenderAccount" />
+      <Property Name="ReceiverAccount" />
     </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />

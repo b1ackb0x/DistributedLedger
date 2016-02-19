@@ -23,7 +23,15 @@ namespace Process
             foreach (Block block in blocksToProcess)
             {
                 HandleGetCase objHandleGetCase = new HandleGetCase();
-
+                foreach (var trans in block.EncryptedTransactions)
+                {
+                    Account senderAccount = objHandleGetCase.GetAccount(trans.SenderAccount.ID);
+                    Account receiverAccount = objHandleGetCase.GetAccount(trans.ReceiverAccount.ID);
+                    Process.HandleSetCase obj = new HandleSetCase(trans.SenderAccount, trans.SenderAccount, senderAccount.TotalAmount - trans.Amount);
+                    obj.SetBlockChain();
+                    obj = new HandleSetCase(trans.ReceiverAccount, trans.ReceiverAccount, receiverAccount.TotalAmount + trans.Amount);
+                    obj.SetBlockChain();
+                }
             }
         }
 

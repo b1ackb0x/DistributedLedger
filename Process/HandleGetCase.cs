@@ -10,10 +10,15 @@ namespace Process
 {
     public class HandleGetCase
     {
-        public Account GetAccount(int accountID, Block latestBlock)
+        public Account GetAccount(int accountID)
+        {
+            return GetAccount(accountID, BlockChainMaster.GetLatestBlock());
+        }
+
+        private Account GetAccount(int accountID, Block latestBlock)
         {
             Account account = null;
-
+            
             if (latestBlock != null)
             {
                 IEnumerable<Transaction> t = latestBlock.EncryptedTransactions.Where(o => o.ReceiverAccount == o.SenderAccount && o.ReceiverAccount.ID == accountID);

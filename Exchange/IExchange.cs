@@ -18,8 +18,8 @@ namespace Exchange
         [OperationContract(IsOneWay = true)]     
         void SetTransaction(ExchangeRequest objTransaction);
 
-        [OperationContract(IsOneWay = true)]
-        BlockChain GetBlockChain();
+        [OperationContract]
+        BlockChainContract GetBlockChain();
     }
 
 
@@ -31,6 +31,13 @@ namespace Exchange
 
         [DataMember]
         public Transaction Trans { get; set; }
+    }
+
+    [DataContract]
+    public class BlockChainContract
+    {
+        [DataMember]
+        public List<Block> Blocks { get; set; }
     }
 
     public interface IExchangeCallBacks

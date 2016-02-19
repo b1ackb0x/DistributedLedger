@@ -77,9 +77,9 @@ namespace Dispatcher
                 obj.SetBlockChain();
         }
 
-        public BlockChain GetBlockChain()
+        public List<Block> GetBlockChain()
         {
-            return Process.BlockChainManager.GetBlockChain();
+            return new List<Block>(Process.BlockChainManager.GetBlockChain().Blocks.Values.OfType<Block>().OrderByDescending(b=>b.TimeStamp));
         }
     }
 

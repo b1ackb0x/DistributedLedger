@@ -62,15 +62,13 @@
   <ItemGroup>
     <Content Include="ExchangeService.svc" />
     <Content Include="Properties\DataSources\DomainModel.BlockChain.datasource" />
+    <Content Include="Properties\DataSources\DomainModel.Block.datasource" />
     <None Include="Service References\DispatcherService\DispatcherService.disco" />
     <None Include="Service References\DispatcherService\configuration91.svcinfo" />
     <None Include="Service References\DispatcherService\configuration.svcinfo" />
     <Content Include="Service References\DispatcherService\Exchange.DispatcherService.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\DispatcherService\DispatcherService5.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\DispatcherService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ClientApp.Models.TransactionModel>" %>
+<%@ Import Namespace="DomainModel" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Index
@@ -45,5 +46,26 @@
         </fieldset>
     </div>
     <% } %>
-    <div class="processing"></div>
+    <div class="processing">
+      
+        <% foreach (var block in  (Block [])ViewData["BlockChain"])
+           {%>
+        <div class="block">
+            <div> <b>Proof of Work:</b> <%: block.ProofOfWork %></div>
+            
+            <div> <b>Previous Block: </b><%:  block.PreviousBlock!=null ? block.PreviousBlock.ProofOfWork : block.ProofOfWork %></div>
+            <% foreach (Transaction trans in block.EncryptedTransactions)
+               {%>
+                   <div class="trans">
+                  <div class="row">  Timestamp: <%: trans.TimeStamp.ToString() %></div>
+                  <div class="row">  Receiver Account: <%: trans.ReceiverAccount.ID %></div>
+                    <div class="row">Sender Account: <%: trans.SenderAccount.ID %></div>
+                   <div class="row"> Amount: <%: trans.Amount %></div>
+                   </div>
+              <% } %>
+              
+        </div>       
+
+          <% } %>
+    </div>
 </asp:Content>

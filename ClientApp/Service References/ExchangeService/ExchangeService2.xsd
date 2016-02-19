@@ -8,4 +8,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ExchangeRequest" nillable="true" type="tns:ExchangeRequest" />
+  <xs:complexType name="BlockChainContract">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DomainModel" minOccurs="0" name="Blocks" nillable="true" type="q2:ArrayOfBlock" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlockChainContract" nillable="true" type="tns:BlockChainContract" />
 </xs:schema>

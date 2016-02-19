@@ -23,7 +23,7 @@ namespace Dispatcher
         void SetTransaction(Transaction transaction);
 
         [OperationContract]
-        BlockChain GetBlockChain();
+        List<Block> GetBlockChain();
     }
 
 

@@ -74,6 +74,51 @@ namespace ClientApp.ExchangeService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BlockChainContract", Namespace="http://schemas.datacontract.org/2004/07/Exchange")]
+    [System.SerializableAttribute()]
+    public partial class BlockChainContract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DomainModel.Block[] BlocksField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DomainModel.Block[] Blocks {
+            get {
+                return this.BlocksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BlocksField, value) != true)) {
+                    this.BlocksField = value;
+                    this.RaisePropertyChanged("Blocks");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ExchangeService.IExchange", CallbackContract=typeof(ClientApp.ExchangeService.IExchangeCallback))]
     public interface IExchange {
@@ -89,6 +134,12 @@ namespace ClientApp.ExchangeService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IExchange/SetTransaction")]
         System.Threading.Tasks.Task SetTransactionAsync(ClientApp.ExchangeService.ExchangeRequest objTransaction);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExchange/GetBlockChain", ReplyAction="http://tempuri.org/IExchange/GetBlockChainResponse")]
+        ClientApp.ExchangeService.BlockChainContract GetBlockChain();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExchange/GetBlockChain", ReplyAction="http://tempuri.org/IExchange/GetBlockChainResponse")]
+        System.Threading.Tasks.Task<ClientApp.ExchangeService.BlockChainContract> GetBlockChainAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -140,6 +191,14 @@ namespace ClientApp.ExchangeService {
         
         public System.Threading.Tasks.Task SetTransactionAsync(ClientApp.ExchangeService.ExchangeRequest objTransaction) {
             return base.Channel.SetTransactionAsync(objTransaction);
+        }
+        
+        public ClientApp.ExchangeService.BlockChainContract GetBlockChain() {
+            return base.Channel.GetBlockChain();
+        }
+        
+        public System.Threading.Tasks.Task<ClientApp.ExchangeService.BlockChainContract> GetBlockChainAsync() {
+            return base.Channel.GetBlockChainAsync();
         }
     }
 }

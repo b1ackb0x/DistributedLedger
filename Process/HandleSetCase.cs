@@ -22,6 +22,7 @@ namespace Process
             transaction.ReceiverAccount = receiverAccount;
             transaction.SenderAccount = senderAccount;
             transaction.TimeStamp = DateTimeOffset.UtcNow;
+           
         }
 
         public void SetBlockChain()
@@ -39,8 +40,8 @@ namespace Process
             else
             {
                 //create new
-                latestBlock = CreateNewBlock(latestBlock);
-                bc.Blocks.Add(latestBlock.ProofOfWork, (latestBlock));
+                Block newBlock = CreateNewBlock(latestBlock);
+                bc.Blocks.Add(newBlock.ProofOfWork, (newBlock));
             }
         }
 
@@ -50,9 +51,10 @@ namespace Process
             Block newBlock = new Block();
             newBlock.TimeStamp = DateTimeOffset.UtcNow;
             newBlock.ProofOfWork = CustomHash.ComputeHash(string.Concat(transaction.Amount.ToString(), latestBlock.PreviousBlock), "SHA256", null);
-            newBlock.PreviousBlock = latestBlock.PreviousBlock;
+            newBlock.PreviousBlock = latestBlock;
             newBlock.EncryptedTransactions = new List<Transaction>();
             newBlock.EncryptedTransactions.Add(transaction);
+            newBlock.Threshhold = 1000;
 
             return newBlock;
         }

@@ -76,12 +76,12 @@ namespace Exchange
              */
         }
 
-        public DomainModel.BlockChain GetBlockChain()
+        public BlockChainContract GetBlockChain()
         {
             DispatcherService.DispatcherClient client = new DispatcherService.DispatcherClient();
-            BlockChain bc = client.GetBlockChain();
+            List<Block> bc = client.GetBlockChain().ToList();
             client.Close();
-            return bc;
+            return new BlockChainContract {Blocks = bc};
         }
     }
 

@@ -13,20 +13,11 @@ namespace ClientApp.Controllers
     public class TransactionController : Controller
     {
         private ExchangeService.ExchangeClient _client;
-
-        public void HandleBroadcast(object sender, EventArgs e)
-        {
-            try
-            {
-                var eventData = (ExchangeService.ExchangeRequest)sender;
-               //TODO---- 
-            }
-            catch (Exception ex)
-            {
-            }
-        }
         public ActionResult Index()
         {
+            ensureClient();
+            ViewData["BlockChain"] = _client.GetBlockChain().Blocks;
+
             return View();
         }
 
@@ -36,15 +27,7 @@ namespace ClientApp.Controllers
             //TransactionModel obj = new TransactionModel();
             //obj.SenderAccountNo = Convert.ToInt32(User.Identity.Name);
 
-            ExchangeCallback cb = new ExchangeCallback();
-            cb.SetHandler(this.HandleBroadcast);
-
-            System.ServiceModel.InstanceContext context =
-                new System.ServiceModel.InstanceContext(cb);
-            if (_client == null)
-            {
-                _client = new ExchangeClient(context);
-            }
+            ensureClient();
             ExchangeRequest request = new ExchangeRequest();
             request.ClientName = "Test";
             request.Trans = new Transaction();
@@ -56,6 +39,33 @@ namespace ClientApp.Controllers
 
             return RedirectToAction("Index");
         }
+
+        private void ensureClient()
+        {
+            if (_client == null)
+            {
+                ExchangeCallback cb = new ExchangeCallback();
+                cb.SetHandler(this.HandleBroadcast);
+
+                System.ServiceModel.InstanceContext context =
+                    new System.ServiceModel.InstanceContext(cb);
+            
+                _client = new ExchangeClient(context);
+            }
+        }
+
+        public void HandleBroadcast(object sender, EventArgs e)
+        {
+            try
+            {
+                var eventData = (ExchangeService.ExchangeRequest)sender;
+                //TODO---- 
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
     }
 
     public class ExchangeCallback : IExchangeCallback

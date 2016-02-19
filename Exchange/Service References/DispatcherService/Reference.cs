@@ -97,10 +97,10 @@ namespace Exchange.DispatcherService {
         System.Threading.Tasks.Task SetTransactionAsync(DomainModel.Transaction transaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDispatcher/GetBlockChain", ReplyAction="http://tempuri.org/IDispatcher/GetBlockChainResponse")]
-        DomainModel.BlockChain GetBlockChain();
+        DomainModel.Block[] GetBlockChain();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDispatcher/GetBlockChain", ReplyAction="http://tempuri.org/IDispatcher/GetBlockChainResponse")]
-        System.Threading.Tasks.Task<DomainModel.BlockChain> GetBlockChainAsync();
+        System.Threading.Tasks.Task<DomainModel.Block[]> GetBlockChainAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -154,11 +154,11 @@ namespace Exchange.DispatcherService {
             return base.Channel.SetTransactionAsync(transaction);
         }
         
-        public DomainModel.BlockChain GetBlockChain() {
+        public DomainModel.Block[] GetBlockChain() {
             return base.Channel.GetBlockChain();
         }
         
-        public System.Threading.Tasks.Task<DomainModel.BlockChain> GetBlockChainAsync() {
+        public System.Threading.Tasks.Task<DomainModel.Block[]> GetBlockChainAsync() {
             return base.Channel.GetBlockChainAsync();
         }
     }

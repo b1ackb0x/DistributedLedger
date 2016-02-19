@@ -15,10 +15,22 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetBlockChain">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBlockChainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Exchange" minOccurs="0" name="GetBlockChainResult" nillable="true" type="q2:BlockChainContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="BroadcastTransectionToClient">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Exchange" minOccurs="0" name="exchangeRequest" nillable="true" type="q2:ExchangeRequest" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Exchange" minOccurs="0" name="exchangeRequest" nillable="true" type="q3:ExchangeRequest" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

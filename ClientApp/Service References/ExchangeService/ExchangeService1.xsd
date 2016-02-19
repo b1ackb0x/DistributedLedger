@@ -21,4 +21,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="ArrayOfBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Block" nillable="true" type="tns:Block" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlock" nillable="true" type="tns:ArrayOfBlock" />
+  <xs:complexType name="Block">
+    <xs:sequence>
+      <xs:element name="_x003C_EncryptedTransactions_x003E_k__BackingField" nillable="true" type="tns:ArrayOfTransaction" />
+      <xs:element name="_x003C_PreviousBlock_x003E_k__BackingField" nillable="true" type="tns:Block" />
+      <xs:element name="_x003C_ProofOfWork_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Threshhold_x003E_k__BackingField" type="xs:long" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="_x003C_TimeStamp_x003E_k__BackingField" type="q2:DateTimeOffset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Block" nillable="true" type="tns:Block" />
+  <xs:complexType name="ArrayOfTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaction" nillable="true" type="tns:ArrayOfTransaction" />
 </xs:schema>

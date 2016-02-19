@@ -18,7 +18,7 @@ namespace Repository
             bc1.EncryptedTransactions.Add(new Transaction() { Amount = 0, ID = Guid.NewGuid(), ReceiverAccount = new Account() { ID = 1, HolderName = "Pallav", TotalAmount = 10000 }, SenderAccount = new Account() { ID = 1, HolderName = "Pallav", TotalAmount = 10000 }, TimeStamp = DateTimeOffset.UtcNow });
             bc1.ProofOfWork = "A";
             bc1.TimeStamp = DateTimeOffset.UtcNow;
-            bc1.Threshhold = 10000;
+            bc1.Threshhold = 1000;
 
             bc1.EncryptedTransactions.Add(new Transaction() { Amount = 0, ID = Guid.NewGuid(), ReceiverAccount = new Account() { ID = 2, HolderName = "Saanvi", TotalAmount = 1000 }, SenderAccount = new Account() { ID = 2, HolderName = "Saanvi", TotalAmount = 1000 }, TimeStamp = DateTimeOffset.UtcNow });
             bc1.TimeStamp = DateTimeOffset.UtcNow;

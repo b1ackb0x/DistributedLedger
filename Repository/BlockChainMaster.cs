@@ -16,7 +16,7 @@ namespace Repository
             Block bc1 = new Block();
             bc1.EncryptedTransactions = new List<Transaction>();
             bc1.EncryptedTransactions.Add(new Transaction() { Amount = 0, ID = Guid.NewGuid(), ReceiverAccount = new Account() { ID = 1, HolderName = "Pallav", TotalAmount = 10000 }, SenderAccount = new Account() { ID = 1, HolderName = "Pallav", TotalAmount = 10000 }, TimeStamp = DateTimeOffset.UtcNow });
-            bc1.ProofOfWork = "A";
+            bc1.ProofOfWork = "DadixJ72LcerXouFPg3EJdpEVdbZAo+A5bUEeIin/c+ZtMZE6";
             bc1.TimeStamp = DateTimeOffset.UtcNow;
             bc1.Threshhold = 1000;
 

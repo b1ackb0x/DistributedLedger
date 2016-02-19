@@ -630,8 +630,8 @@ div.form {
 }
 div.processing {
     /*overflow-x: auto;
-    overflow-y: hidden;*/
-    height: 350px;
+    overflow-y: hidden;
+    height: 350px;*/
 }
 
 .trans {
@@ -661,7 +661,6 @@ div.block {
     position: relative;
     border: 1px solid;
     border-radius: 5px;
-    height: 300px;
     float: left;
     width: 150px;
     word-wrap: break-word;

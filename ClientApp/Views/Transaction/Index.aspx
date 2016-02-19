@@ -53,7 +53,7 @@
         <div class="block">
             <div> <b>Proof of Work:</b> <%: block.ProofOfWork %></div>
             
-            <div> <b>Previous Block: </b><%:  block.PreviousBlock!=null ? block.PreviousBlock.ProofOfWork : block.ProofOfWork %></div>
+            <div> <b>Previous Block: </b><%:  block.PreviousBlock!=null ? block.PreviousBlock.ProofOfWork : "" %></div>
             <% foreach (Transaction trans in block.EncryptedTransactions)
                {%>
                    <div class="trans">

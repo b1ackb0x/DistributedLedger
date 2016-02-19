@@ -39,9 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="ProcessData.cs" />
-    <Compile Include="PrepareBlock.cs" />
+    <Compile Include="HandleGetCase.cs" />
+    <Compile Include="HandleProcessCase.cs" />
+    <Compile Include="HandleSetCase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

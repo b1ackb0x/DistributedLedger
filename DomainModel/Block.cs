@@ -14,7 +14,7 @@ namespace DomainModel
 
         public List<EncryptedTransaction> EncryptedTransactions { get; set; }
 
-        public Transaction Transaction { get; set; }
+        public EncryptedTransaction Transaction { get; set; }
 
         public Block PreviousBlock { get; set; }
 

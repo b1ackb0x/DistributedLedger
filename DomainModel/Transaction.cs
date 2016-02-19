@@ -8,9 +8,9 @@ namespace DomainModel
 {
     public class Transaction
     {
-        public int ID { get; set; }
+        public Guid ID { get; set; }
         public DateTimeOffset TimeStamp { get; set; }
-        public double Ammount { get; set; }
+        public double Amount { get; set; }
         public Account SenderAccount { get; set; }
         public Account ReceiverAccount { get; set; }
 

@@ -53,6 +53,7 @@ namespace Process
             {
                 //Thread t = new Thread(Sync);
                 //.Start();
+                Thread.Sleep(1000);
                 Sync();
             }
         }

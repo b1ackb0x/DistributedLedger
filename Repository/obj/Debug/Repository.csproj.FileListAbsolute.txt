@@ -11,6 +11,7 @@ C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Repository\bin\Debug\DomainMo
 C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Repository\obj\Debug\Repository.dll
 C:\Users\vishu.puri\Desktop\Code\DistributedLedger\Repository\obj\Debug\Repository.pdb
+C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 C:\Deepak Docs\BITLOG\DistributedLedger\Repository\bin\Debug\Repository.dll
 C:\Deepak Docs\BITLOG\DistributedLedger\Repository\bin\Debug\Repository.pdb
 C:\Deepak Docs\BITLOG\DistributedLedger\Repository\bin\Debug\DomainModel.dll
@@ -18,4 +19,3 @@ C:\Deepak Docs\BITLOG\DistributedLedger\Repository\bin\Debug\DomainModel.pdb
 C:\Deepak Docs\BITLOG\DistributedLedger\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 C:\Deepak Docs\BITLOG\DistributedLedger\Repository\obj\Debug\Repository.dll
 C:\Deepak Docs\BITLOG\DistributedLedger\Repository\obj\Debug\Repository.pdb
-C:\Users\pallav.kumar\Desktop\DistributedLedger\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache

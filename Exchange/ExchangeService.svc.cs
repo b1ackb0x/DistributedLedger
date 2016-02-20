@@ -18,6 +18,8 @@ namespace Exchange
 
         private static object locker = new object();
 
+         private DispatcherService.DispatcherClient client;
+
         public void RegisterClient(string clientName)
         {
             if (clientName != null && clientName != "")
@@ -41,11 +43,23 @@ namespace Exchange
         }
 
 
-        public void SetTransaction(ExchangeRequest exchangeRequest)
+        public void SetTransaction(int senderAccountId, int receiverAccountId, int amt)
         {
-            DispatcherService.DispatcherClient client = new DispatcherService.DispatcherClient();
-            client.SetTransaction(exchangeRequest.Trans);
-            client.Close();
+            try
+            {
+                if (client == null)
+                {
+                    client = new DispatcherService.DispatcherClient();
+                }
+                
+                client.SetTransaction(senderAccountId, receiverAccountId, amt);
+            
+            }
+            catch(Exception)
+            {
+                
+                throw;
+            }
             /*
              lock (locker)
             {
@@ -78,9 +92,12 @@ namespace Exchange
 
         public BlockChainContract GetBlockChain()
         {
-            DispatcherService.DispatcherClient client = new DispatcherService.DispatcherClient();
+            if (client == null)
+            {
+                client = new DispatcherService.DispatcherClient();
+            }
+            
             List<Block> bc = client.GetBlockChain().ToList();
-            client.Close();
             return new BlockChainContract {Blocks = bc};
         }
     }

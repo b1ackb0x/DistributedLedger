@@ -71,9 +71,10 @@ namespace Dispatcher
         //    this._client.RegisterClient(this.txtClientName.Text);
         //}
 
-        public void SetTransaction(DomainModel.Transaction transaction)
+        public void SetTransaction(int senderAccountId, int receiverAccountId, int amt)
         {
-                Process.HandleSetCase obj = new HandleSetCase(transaction.SenderAccount, transaction.ReceiverAccount, transaction.Amount);   
+            Process.HandleSetCase obj = new HandleSetCase(new Account {ID = senderAccountId},
+                new Account {ID = receiverAccountId}, amt);
                 obj.SetBlockChain();
         }
 

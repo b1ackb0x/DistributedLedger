@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Process
@@ -31,8 +32,13 @@ namespace Process
 
             Block latestBlock = Repository.BlockChainMaster.GetLatestBlock();
 
+            Account senderAccount = HandleGetCase.GetAccount(transaction.SenderAccount.ID);
+            if (transaction.SenderAccount.ID != transaction.ReceiverAccount.ID && senderAccount.TotalAmount < transaction.Amount)
+            {
+                throw new Exception("Invalid Transaction");
+            }
             //Determine the size of encrypt transaction + Size of Existing block,
-            if (GetSize(transaction) + GetSize(latestBlock) < latestBlock.Threshhold)
+            if ((GetSize(transaction) + GetSize(latestBlock)) < latestBlock.Threshhold)
             {
                 //Add in existing
                 latestBlock.EncryptedTransactions.Add(transaction);
@@ -43,15 +49,25 @@ namespace Process
                 Block newBlock = CreateNewBlock(latestBlock);
                 bc.Blocks.Add(newBlock.ProofOfWork, (newBlock));
             }
+            if (transaction.SenderAccount.ID != transaction.ReceiverAccount.ID)
+            {
+                //Thread t = new Thread(Sync);
+                //.Start();
+                Sync();
+            }
         }
 
+        private void Sync()
+        {
+            new HandleProcessCase().SettleTransactions();
+        }
 
         public Block CreateNewBlock(Block latestBlock)
         {
             Block newBlock = new Block();
             newBlock.TimeStamp = DateTimeOffset.UtcNow;
-            newBlock.ProofOfWork = CustomHash.ComputeHash(string.Concat(transaction.Amount.ToString(), latestBlock.PreviousBlock), "SHA256", null);
-            newBlock.PreviousBlock = latestBlock;
+            newBlock.ProofOfWork = CustomHash.ComputeHash(string.Concat(transaction.Amount.ToString(), latestBlock.ProofOfWork), "SHA256", null);
+            newBlock.PreviousBlockHash = latestBlock.ProofOfWork;
             newBlock.EncryptedTransactions = new List<Transaction>();
             newBlock.EncryptedTransactions.Add(transaction);
             newBlock.Threshhold = 1000;

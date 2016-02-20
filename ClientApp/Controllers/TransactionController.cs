@@ -17,7 +17,10 @@ namespace ClientApp.Controllers
         {
             ensureClient();
             ViewData["BlockChain"] = _client.GetBlockChain().Blocks;
-
+            if (TempData["error"] != null)
+            {
+                ViewData["error"] = ((Exception) TempData["error"]).Message;
+            }
             return View();
         }
 
@@ -28,28 +31,27 @@ namespace ClientApp.Controllers
             //obj.SenderAccountNo = Convert.ToInt32(User.Identity.Name);
 
             ensureClient();
-            ExchangeRequest request = new ExchangeRequest();
-            request.ClientName = "Test";
-            request.Trans = new Transaction();
-            request.Trans.SenderAccount = new Account { ID = t.SenderAccountNo };
-            request.Trans.ReceiverAccount = new Account { ID = t.ReceiverAccountNo };
-            request.Trans.Amount = t.Amount;
-            request.Trans.TimeStamp = DateTimeOffset.Now;
-            _client.SetTransaction(request);
+            try
+            {  
+                _client.SetTransaction(t.SenderAccountNo,t.ReceiverAccountNo, t.Amount);
+            }
+            catch (Exception ex)
+            {
+                TempData["erroe"] = ex;
+            }
 
             return RedirectToAction("Index");
         }
 
         private void ensureClient()
         {
+            ExchangeCallback cb = new ExchangeCallback();
+            cb.SetHandler(this.HandleBroadcast);
+
+            System.ServiceModel.InstanceContext context =
+                new System.ServiceModel.InstanceContext(cb);
             if (_client == null)
             {
-                ExchangeCallback cb = new ExchangeCallback();
-                cb.SetHandler(this.HandleBroadcast);
-
-                System.ServiceModel.InstanceContext context =
-                    new System.ServiceModel.InstanceContext(cb);
-            
                 _client = new ExchangeClient(context);
             }
         }

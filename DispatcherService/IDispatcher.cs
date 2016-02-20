@@ -20,7 +20,7 @@ namespace Dispatcher
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        void SetTransaction(Transaction transaction);
+        void SetTransaction(int senderAccountId, int receiverAccountId, int amt);
 
         [OperationContract]
         List<Block> GetBlockChain();

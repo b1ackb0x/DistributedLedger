@@ -8,28 +8,25 @@ using Repository;
 
 namespace Process
 {
-    public class HandleGetCase
+    public static class HandleGetCase
     {
-        public Account GetAccount(int accountID)
+        public static Account GetAccount(int accountID)
         {
-            return GetAccount(accountID, BlockChainMaster.GetLatestBlock());
-        }
-
-        private Account GetAccount(int accountID, Block latestBlock)
-        {
-            Account account = null;
-            
-            if (latestBlock != null)
+            Account account = new Account {ID = accountID, TotalAmount = 0, TransferAmount = 0};
+            Block latestBlock = BlockChainMaster.GetLatestBlock();
+            while (latestBlock != null)
             {
-                IEnumerable<Transaction> t = latestBlock.EncryptedTransactions.Where(o => o.ReceiverAccount == o.SenderAccount && o.ReceiverAccount.ID == accountID);
+                IEnumerable<Transaction> t = latestBlock.EncryptedTransactions.Where(o => o.ReceiverAccount.ID == o.SenderAccount.ID && o.ReceiverAccount.ID == accountID);
                 if (t != null && t.Count() > 0)
                 {
-                    account = t.Select(o => o.ReceiverAccount).FirstOrDefault();
+                    Transaction singleT = t.OrderByDescending(o => o.TimeStamp).FirstOrDefault();
+                    if (singleT != null)
+                    {
+                        account.TotalAmount = singleT.Amount;
+                        return account;
+                    }
                 }
-                else
-                {
-                    account = GetAccount(accountID, latestBlock.PreviousBlock);
-                }
+                latestBlock = latestBlock.PreviousBlockHash==null? null :  BlockChainMaster.BlockChain.Blocks[latestBlock.PreviousBlockHash] as Block;
             }
 
             return account;

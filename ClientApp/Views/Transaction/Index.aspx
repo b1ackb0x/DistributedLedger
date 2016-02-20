@@ -5,7 +5,10 @@
     Index
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <% using (Html.BeginForm("Send", "Transaction", FormMethod.Post))
+    <div class="error">
+        <%: ViewData["error"] %>
+    </div>
+    <% using (Html.BeginForm("Send", "Transaction", FormMethod.Post, new {autocomplete= "off"}))
        { %>
     <%: Html.ValidationSummary(true, "Please correct the errors and try again.") %>
     <div class="form">
@@ -48,14 +51,21 @@
     <% } %>
     <div class="processing">
       
+        <% int i = 0; %>
         <% foreach (var block in  (Block [])ViewData["BlockChain"])
            {%>
+        
+             <% i = i + 1; %>
         <div class="block">
+            <h1><%: i %></h1>
             <div> <b>Proof of Work:</b> <%: block.ProofOfWork %></div>
             
-            <div> <b>Previous Block: </b><%:  block.PreviousBlock!=null ? block.PreviousBlock.ProofOfWork : "" %></div>
+            <div> <b>Previous Block: </b><%:  block.PreviousBlockHash%></div>
+            
             <% foreach (Transaction trans in block.EncryptedTransactions)
                {%>
+           
+            
                    <div class="trans">
                   <div class="row">  Timestamp: <%: trans.TimeStamp.ToString() %></div>
                   <div class="row">  Receiver Account: <%: trans.ReceiverAccount.ID %></div>

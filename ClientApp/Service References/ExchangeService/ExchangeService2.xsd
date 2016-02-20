@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Exchange" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Exchange" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:8080/ExchangeService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DomainModel" />
-  <xs:complexType name="ExchangeRequest">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DomainModel" minOccurs="0" name="Trans" nillable="true" type="q1:Transaction" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ExchangeRequest" nillable="true" type="tns:ExchangeRequest" />
   <xs:complexType name="BlockChainContract">
     <xs:sequence>
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DomainModel" minOccurs="0" name="Blocks" nillable="true" type="q2:ArrayOfBlock" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DomainModel" minOccurs="0" name="Blocks" nillable="true" type="q1:ArrayOfBlock" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BlockChainContract" nillable="true" type="tns:BlockChainContract" />
+  <xs:complexType name="ExchangeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DomainModel" minOccurs="0" name="Trans" nillable="true" type="q2:Transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExchangeRequest" nillable="true" type="tns:ExchangeRequest" />
 </xs:schema>

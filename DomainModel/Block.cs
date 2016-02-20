@@ -15,7 +15,7 @@ namespace DomainModel
 
         public List<Transaction> EncryptedTransactions { get; set; }
 
-        public Block PreviousBlock { get; set; }
+        public string PreviousBlockHash { get; set; }
 
         public long Threshhold { get; set; }
     }

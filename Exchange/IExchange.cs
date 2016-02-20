@@ -15,8 +15,8 @@ namespace Exchange
         [OperationContract(IsOneWay = true)]
         void RegisterClient(string clientName);
 
-        [OperationContract(IsOneWay = true)]     
-        void SetTransaction(ExchangeRequest objTransaction);
+        [OperationContract]
+        void SetTransaction(int senderAccountId, int receiverAccountId, int amt);
 
         [OperationContract]
         BlockChainContract GetBlockChain();

@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DomainModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DomainModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:8080/ExchangeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:import schemaLocation="http://localhost:8080/ExchangeService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
-  <xs:complexType name="Transaction">
-    <xs:sequence>
-      <xs:element name="_x003C_Amount_x003E_k__BackingField" type="xs:double" />
-      <xs:element name="_x003C_ID_x003E_k__BackingField" type="ser:guid" />
-      <xs:element name="_x003C_ReceiverAccount_x003E_k__BackingField" nillable="true" type="tns:Account" />
-      <xs:element name="_x003C_SenderAccount_x003E_k__BackingField" nillable="true" type="tns:Account" />
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" name="_x003C_TimeStamp_x003E_k__BackingField" type="q1:DateTimeOffset" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
-  <xs:complexType name="Account">
-    <xs:sequence>
-      <xs:element name="_x003C_HolderName_x003E_k__BackingField" nillable="true" type="xs:string" />
-      <xs:element name="_x003C_ID_x003E_k__BackingField" type="xs:int" />
-      <xs:element name="_x003C_TotalAmount_x003E_k__BackingField" type="xs:double" />
-      <xs:element name="_x003C_TransferAmount_x003E_k__BackingField" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:import schemaLocation="http://localhost:8080/ExchangeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="ArrayOfBlock">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Block" nillable="true" type="tns:Block" />
@@ -33,7 +14,7 @@
       <xs:element name="_x003C_PreviousBlock_x003E_k__BackingField" nillable="true" type="tns:Block" />
       <xs:element name="_x003C_ProofOfWork_x003E_k__BackingField" nillable="true" type="xs:string" />
       <xs:element name="_x003C_Threshhold_x003E_k__BackingField" type="xs:long" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="_x003C_TimeStamp_x003E_k__BackingField" type="q2:DateTimeOffset" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" name="_x003C_TimeStamp_x003E_k__BackingField" type="q1:DateTimeOffset" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Block" nillable="true" type="tns:Block" />
@@ -43,4 +24,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfTransaction" nillable="true" type="tns:ArrayOfTransaction" />
+  <xs:complexType name="Transaction">
+    <xs:sequence>
+      <xs:element name="_x003C_Amount_x003E_k__BackingField" type="xs:double" />
+      <xs:element name="_x003C_ID_x003E_k__BackingField" type="ser:guid" />
+      <xs:element name="_x003C_ReceiverAccount_x003E_k__BackingField" nillable="true" type="tns:Account" />
+      <xs:element name="_x003C_SenderAccount_x003E_k__BackingField" nillable="true" type="tns:Account" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="_x003C_TimeStamp_x003E_k__BackingField" type="q2:DateTimeOffset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element name="_x003C_HolderName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ID_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_TotalAmount_x003E_k__BackingField" type="xs:double" />
+      <xs:element name="_x003C_TransferAmount_x003E_k__BackingField" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
 </xs:schema>

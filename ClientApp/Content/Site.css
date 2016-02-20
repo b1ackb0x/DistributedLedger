@@ -629,9 +629,10 @@ div.form {
 
 }
 div.processing {
-    /*overflow-x: auto;
+    overflow-x: auto;
     overflow-y: hidden;
-    height: 350px;*/
+    /*height: 350px;*/
+    display: flex;
 }
 
 .trans {

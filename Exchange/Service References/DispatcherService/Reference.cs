@@ -91,10 +91,10 @@ namespace Exchange.DispatcherService {
         System.Threading.Tasks.Task<Exchange.DispatcherService.CompositeType> GetDataUsingDataContractAsync(Exchange.DispatcherService.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDispatcher/SetTransaction", ReplyAction="http://tempuri.org/IDispatcher/SetTransactionResponse")]
-        void SetTransaction(DomainModel.Transaction transaction);
+        void SetTransaction(int senderAccountId, int receiverAccountId, int amt);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDispatcher/SetTransaction", ReplyAction="http://tempuri.org/IDispatcher/SetTransactionResponse")]
-        System.Threading.Tasks.Task SetTransactionAsync(DomainModel.Transaction transaction);
+        System.Threading.Tasks.Task SetTransactionAsync(int senderAccountId, int receiverAccountId, int amt);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDispatcher/GetBlockChain", ReplyAction="http://tempuri.org/IDispatcher/GetBlockChainResponse")]
         DomainModel.Block[] GetBlockChain();
@@ -146,12 +146,12 @@ namespace Exchange.DispatcherService {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public void SetTransaction(DomainModel.Transaction transaction) {
-            base.Channel.SetTransaction(transaction);
+        public void SetTransaction(int senderAccountId, int receiverAccountId, int amt) {
+            base.Channel.SetTransaction(senderAccountId, receiverAccountId, amt);
         }
         
-        public System.Threading.Tasks.Task SetTransactionAsync(DomainModel.Transaction transaction) {
-            return base.Channel.SetTransactionAsync(transaction);
+        public System.Threading.Tasks.Task SetTransactionAsync(int senderAccountId, int receiverAccountId, int amt) {
+            return base.Channel.SetTransactionAsync(senderAccountId, receiverAccountId, amt);
         }
         
         public DomainModel.Block[] GetBlockChain() {

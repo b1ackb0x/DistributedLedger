@@ -2,3 +2,7 @@ C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainMode
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\pallav.kumar\Desktop\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\bin\Debug\DomainModel.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\bin\Debug\DomainModel.pdb
+C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\obj\Debug\DomainModel.dll
+C:\Deepak Docs\BITLOG\DistributedLedger\DomainModel\obj\Debug\DomainModel.pdb
